@@ -38,11 +38,12 @@ class LyricsContainer extends React.Component {
     evt.preventDefault()
 
     if (this.state.artistQuery && this.state.songQuery) {
-      axios.get(`api/lyrics/${this.state.artistQuery}/${this.state.songQuery}`)
-        .then(res => res.data)
-        .then(textObj => setLyrics(textObj.lyric))
-        .then(actionObj => store.dispatch(actionObj))
-        .catch()
+      store.dispatch(fetchLyrics(this.state.artistQuery, this.state.songQuery));
+      // axios.get(`api/lyrics/${this.state.artistQuery}/${this.state.songQuery}`)
+      //   .then(res => res.data)
+      //   .then(textObj => setLyrics(textObj.lyric))
+      //   .then(actionObj => store.dispatch(actionObj))
+      //   .catch()
     }
 
     console.log("handling event: ", this.state)
