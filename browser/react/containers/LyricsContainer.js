@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import store from '../../redux/store'
 import Lyrics from '../components/Lyrics'
-import setLyrics from '../../redux/action-creators/lyrics'
+import fetchLyrics from '../../redux/action-creators/lyrics'
 
 
 class LyricsContainer extends React.Component {

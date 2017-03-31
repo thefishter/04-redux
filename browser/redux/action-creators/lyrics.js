@@ -7,6 +7,7 @@ const setLyrics = (text) => ({
 })
 
 const fetchLyrics = function (artist, song){
+  console.log(artist, song)
     return function (dispatch, getState){
         axios.get(`api/lyrics/${artist}/${song}`)
         .then(res => {
