@@ -39,6 +39,7 @@ const Sidebar = (props) => {
           })
         }
       </ul>
+       <Link to={`/lyrics`}>Lyrics</Link>
     </sidebar>
   );
 }
